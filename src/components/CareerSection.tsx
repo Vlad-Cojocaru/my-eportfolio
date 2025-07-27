@@ -10,6 +10,18 @@ const CareerSection = () => {
             Career & Education
           </h2>
           
+          {/* Career Image */}
+          <div className="flex justify-center mb-12">
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop"
+                alt="Programming workspace"
+                className="w-full max-w-2xl h-64 object-cover rounded-xl shadow-soft border border-border/50"
+              />
+              <div className="absolute inset-0 bg-gradient-primary/10 rounded-xl"></div>
+            </div>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Education Card */}
             <div className="bg-gradient-card rounded-xl p-8 shadow-soft border border-border/50 hover:shadow-elegant transition-all duration-300">

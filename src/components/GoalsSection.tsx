@@ -39,6 +39,18 @@ const GoalsSection = () => {
             Goals & Personal Growth
           </h2>
           
+          {/* Goals Header Image */}
+          <div className="flex justify-center mb-12">
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=600&h=300&fit=crop"
+                alt="Night sky representing aspirations"
+                className="w-full max-w-2xl h-64 object-cover rounded-xl shadow-soft border border-border/50"
+              />
+              <div className="absolute inset-0 bg-gradient-accent/10 rounded-xl"></div>
+            </div>
+          </div>
+          
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Goals */}
             <div className="space-y-8">
