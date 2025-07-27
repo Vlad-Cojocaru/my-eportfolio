@@ -1,0 +1,159 @@
+import { Target, User, Code, MessageSquare } from "lucide-react";
+
+const GoalsSection = () => {
+  const skills = {
+    languages: ["Java", "Python", "SQL", "JavaScript", "RISC-V Assembly", "Bash", "Verilog"],
+    frameworks: ["Spring Boot", "React", "Spring MVC", "Tailwind CSS"],
+    tools: ["GitHub", "Make.com", "Webhooks", "GoHighLevel CRM", "Docker", "Railway"],
+    soft: ["Initiative", "Problem-solving", "Communication", "Leadership", "Collaboration"]
+  };
+
+  const goals = [
+    {
+      category: "Career Objective",
+      description: "Become a developer who builds high-utility tools that people actually use and depend on.",
+      icon: Target
+    },
+    {
+      category: "Personal Growth",
+      description: "Continue building and testing ideas as an entrepreneur while developing technical expertise.",
+      icon: User
+    },
+    {
+      category: "Technical Focus",
+      description: "Master full-stack development while maintaining focus on user experience and practical solutions.",
+      icon: Code
+    },
+    {
+      category: "Communication",
+      description: "Develop strong collaboration skills and the ability to translate technical concepts for diverse audiences.",
+      icon: MessageSquare
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Goals & Personal Growth
+          </h2>
+          
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Goals */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-foreground mb-6">Dreams & Goals</h3>
+              
+              {goals.map((goal, index) => {
+                const IconComponent = goal.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50 hover:shadow-elegant transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 bg-gradient-primary rounded-lg flex-shrink-0">
+                        <IconComponent className="w-6 h-6 text-primary-foreground" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-lg text-primary mb-2">
+                          {goal.category}
+                        </h4>
+                        <p className="text-foreground leading-relaxed">
+                          {goal.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            
+            {/* Skills Matrix */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-foreground mb-6">Skills Matrix</h3>
+              
+              <div className="space-y-6">
+                <div className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50">
+                  <h4 className="font-semibold text-lg text-primary mb-4">Programming Languages</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.languages.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50">
+                  <h4 className="font-semibold text-lg text-primary mb-4">Frameworks & Libraries</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.frameworks.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-accent/10 text-accent border border-accent/20 rounded-full text-sm font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50">
+                  <h4 className="font-semibold text-lg text-primary mb-4">Tools & Technologies</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.tools.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-secondary/50 text-secondary-foreground border border-secondary rounded-full text-sm font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50">
+                  <h4 className="font-semibold text-lg text-primary mb-4">Soft Skills</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.soft.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-gradient-primary text-primary-foreground rounded-full text-sm font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Values & Strengths */}
+          <div className="mt-12 bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl p-8 border-l-4 border-primary">
+            <h3 className="text-2xl font-bold text-foreground mb-4">Values & Strengths</h3>
+            <div className="space-y-4 text-lg leading-relaxed">
+              <p className="text-foreground">
+                <strong className="text-primary">Learning through Real-World Application:</strong> I believe in learning by doing. My internship experience at CanDeal, combined with running my own agency, has taught me more about practical software development than classroom theory alone.
+              </p>
+              
+              <p className="text-foreground">
+                <strong className="text-primary">EQ Focus:</strong> I prioritize self-awareness and responsibility in both my personal growth and professional relationships. Understanding myself and taking ownership of my work helps me be a better teammate and developer.
+              </p>
+              
+              <p className="text-foreground">
+                <strong className="text-primary">Continuous Iteration:</strong> Whether it's code, business processes, or personal skills, I believe in constant improvement through feedback, reflection, and adaptation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default GoalsSection;
