@@ -3,7 +3,7 @@ import { Download, GraduationCap, Briefcase } from "lucide-react";
 
 const CareerSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="career" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -24,9 +24,9 @@ const CareerSection = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Education Card */}
-            <div className="bg-gradient-card rounded-xl p-8 shadow-soft border border-border/50 hover:shadow-elegant transition-all duration-300">
+            <div className="group bg-gradient-card rounded-xl p-8 shadow-soft border border-border/50 hover:shadow-elegant hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-gradient-primary rounded-lg">
+                <div className="p-3 bg-gradient-primary rounded-lg group-hover:scale-110 transition-transform duration-300">
                   <GraduationCap className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground">Education</h3>
@@ -51,9 +51,9 @@ const CareerSection = () => {
             </div>
             
             {/* Experience Card */}
-            <div className="bg-gradient-card rounded-xl p-8 shadow-soft border border-border/50 hover:shadow-elegant transition-all duration-300">
+            <div className="group bg-gradient-card rounded-xl p-8 shadow-soft border border-border/50 hover:shadow-elegant hover:border-accent/20 transition-all duration-300 transform hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-gradient-accent rounded-lg">
+                <div className="p-3 bg-gradient-accent rounded-lg group-hover:scale-110 transition-transform duration-300">
                   <Briefcase className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground">Experience</h3>

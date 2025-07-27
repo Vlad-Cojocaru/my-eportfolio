@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
-import profileImage from "@/assets/vlad-profile.jpg";
+import profileImage from "/lovable-uploads/643ca919-1139-498b-97ab-e8f4ec2e13e1.png";
 import heroBg from "@/assets/hero-tech-bg.jpg";
 
 const HeroSection = () => {

@@ -32,7 +32,7 @@ const GoalsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="goals" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -61,11 +61,11 @@ const GoalsSection = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50 hover:shadow-elegant transition-all duration-300"
+                    className="group bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50 hover:shadow-glow hover:border-primary/30 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-gradient-primary rounded-lg flex-shrink-0">
-                        <IconComponent className="w-6 h-6 text-primary-foreground" />
+                      <div className="p-3 bg-gradient-primary rounded-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="w-6 h-6 text-primary-foreground group-hover:animate-pulse" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-lg text-primary mb-2">
@@ -86,13 +86,13 @@ const GoalsSection = () => {
               <h3 className="text-2xl font-bold text-foreground mb-6">Skills Matrix</h3>
               
               <div className="space-y-6">
-                <div className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50">
-                  <h4 className="font-semibold text-lg text-primary mb-4">Programming Languages</h4>
+                <div className="group bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50 hover:shadow-glow hover:border-primary/20 transition-all duration-500 transform hover:-translate-y-1">
+                  <h4 className="font-semibold text-lg text-primary mb-4 group-hover:text-accent transition-colors duration-300">Programming Languages</h4>
                   <div className="flex flex-wrap gap-2">
                     {skills.languages.map((skill, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
                       >
                         {skill}
                       </span>
@@ -100,13 +100,13 @@ const GoalsSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50">
-                  <h4 className="font-semibold text-lg text-primary mb-4">Frameworks & Libraries</h4>
+                <div className="group bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50 hover:shadow-glow hover:border-accent/20 transition-all duration-500 transform hover:-translate-y-1">
+                  <h4 className="font-semibold text-lg text-primary mb-4 group-hover:text-accent transition-colors duration-300">Frameworks & Libraries</h4>
                   <div className="flex flex-wrap gap-2">
                     {skills.frameworks.map((skill, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-accent/10 text-accent border border-accent/20 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-accent/10 text-accent border border-accent/20 rounded-full text-sm font-medium hover:bg-accent hover:text-accent-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
                       >
                         {skill}
                       </span>
@@ -114,13 +114,13 @@ const GoalsSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50">
-                  <h4 className="font-semibold text-lg text-primary mb-4">Tools & Technologies</h4>
+                <div className="group bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50 hover:shadow-glow hover:border-secondary/20 transition-all duration-500 transform hover:-translate-y-1">
+                  <h4 className="font-semibold text-lg text-primary mb-4 group-hover:text-secondary transition-colors duration-300">Tools & Technologies</h4>
                   <div className="flex flex-wrap gap-2">
                     {skills.tools.map((skill, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-secondary/50 text-secondary-foreground border border-secondary rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-secondary/50 text-secondary-foreground border border-secondary rounded-full text-sm font-medium hover:bg-secondary hover:scale-110 transition-all duration-300 cursor-pointer"
                       >
                         {skill}
                       </span>
@@ -128,13 +128,13 @@ const GoalsSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50">
-                  <h4 className="font-semibold text-lg text-primary mb-4">Soft Skills</h4>
+                <div className="group bg-gradient-card rounded-xl p-6 shadow-soft border border-border/50 hover:shadow-glow hover:border-primary/20 transition-all duration-500 transform hover:-translate-y-1">
+                  <h4 className="font-semibold text-lg text-primary mb-4 group-hover:text-accent transition-colors duration-300">Soft Skills</h4>
                   <div className="flex flex-wrap gap-2">
                     {skills.soft.map((skill, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-gradient-primary text-primary-foreground rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-gradient-primary text-primary-foreground rounded-full text-sm font-medium hover:scale-110 hover:shadow-soft transition-all duration-300 cursor-pointer"
                       >
                         {skill}
                       </span>
