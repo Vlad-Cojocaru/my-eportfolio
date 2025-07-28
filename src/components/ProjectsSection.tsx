@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import leadstreamDesktop from "@/assets/leadstream-desktop.jpg";
 import leadstreamMobile from "@/assets/leadstream-mobile.jpg";
-import eportfolioImage from "@/assets/EportfolioImage.png";
+import eportfolioImage from "@/assets/EportfolioImage.jpg";
 
 const ProjectsSection = () => {
   const projects = [
