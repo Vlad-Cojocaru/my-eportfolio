@@ -12,9 +12,9 @@ const AboutSection = () => {
             <div className="lg:order-1 flex justify-center">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=500&fit=crop"
-                  alt="Person coding"
-                  className="w-80 h-96 object-cover rounded-xl shadow-soft border border-border/50"
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=500&fit=crop"
+                  alt="Code on computer screen"
+                  className="w-96 h-[500px] object-cover rounded-xl shadow-soft border border-border/50"
                 />
                 <div className="absolute inset-0 bg-gradient-primary/10 rounded-xl"></div>
               </div>

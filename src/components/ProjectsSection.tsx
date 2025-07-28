@@ -2,11 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import leadstreamDesktop from "@/assets/leadstream-desktop.jpg";
 import leadstreamMobile from "@/assets/leadstream-mobile.jpg";
+import eportfolioImage from "@/assets/EportfolioImage.png";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Lead Stream Pro",
+      title: "Lead Stream App",
       techStack: ["React", "Spring Boot", "MySQL", "Tailwind CSS"],
       description: "A real-time lead-management portal that keeps your CRM and database perfectly in sync.",
       details: "Leverages Spring Data JPA for CRUD and custom joins, Jackson for JSON payloads, and a modular React/Tailwind UI for a responsive workflow. Features webhook integration for real-time synchronization between external CRMs and internal database.",
@@ -15,6 +16,18 @@ const ProjectsSection = () => {
         mobile: leadstreamMobile
       },
       featured: true
+    },
+    {
+      title: "E-Portfolio",
+      techStack: ["TypeScript", "React", "Tailwind CSS", "Cursor AI", "Vite"],
+      description: "A modern, responsive personal portfolio showcasing my development skills and projects.",
+      details: "Built with TypeScript for type safety and better development experience. Features a clean, modern UI using Tailwind CSS with custom gradients and animations. Developed with Cursor AI assistance for rapid prototyping and code optimization. Includes interactive components, smooth scrolling navigation, and responsive design that works seamlessly across all devices.",
+      images: {
+        desktop: eportfolioImage,
+        mobile: eportfolioImage
+      },
+      featured: true,
+      date: "July 2025"
     },
     {
       title: "Content Calendar",
@@ -51,7 +64,9 @@ const ProjectsSection = () => {
                 } rounded-xl p-8 hover:shadow-elegant transition-all duration-300`}
               >
                 {project.featured && (
-                  <div className="flex flex-col lg:flex-row gap-8 items-start">
+                  <div className={`flex flex-col lg:flex-row gap-8 items-start ${
+                    project.title === "E-Portfolio" ? "lg:flex-row-reverse" : ""
+                  }`}>
                     {/* Project Info */}
                     <div className="lg:w-1/2 space-y-6">
                       <div>
@@ -83,40 +98,56 @@ const ProjectsSection = () => {
                       </div>
                       
                       <div className="flex gap-3">
-                        <Button variant="hero" className="group">
-                          <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                          Live Demo
-                        </Button>
-                        <Button variant="outline" className="group">
-                          <Github className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                          View Code
+                        {project.title !== "E-Portfolio" && (
+                          <Button variant="hero" className="group" asChild>
+                            <a href="/demo">
+                              <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                              Live Demo
+                            </a>
+                          </Button>
+                        )}
+                        <Button variant="outline" className="group" asChild>
+                          <a href="https://github.com/Vlad-Cojocaru" target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                            View Code
+                          </a>
                         </Button>
                       </div>
                     </div>
                     
-                    {/* Project Images */}
-                    <div className="lg:w-1/2 space-y-4">
-                      <div className="relative">
-                        <img
-                          src={project.images.desktop}
-                          alt={`${project.title} desktop view`}
-                          className="w-full rounded-lg shadow-soft border border-border/50"
-                        />
-                        <div className="absolute top-2 left-2 px-2 py-1 bg-background/80 backdrop-blur-sm rounded text-xs font-medium text-muted-foreground">
-                          Desktop View
+                    {/* Project Images - Different layouts for different projects */}
+                    <div className="lg:w-1/2 relative">
+                      {project.title === "E-Portfolio" ? (
+                        // E-Portfolio: Single image layout
+                        <div className="relative mt-8">
+                          <img
+                            src={project.images.desktop}
+                            alt={`${project.title} screenshot`}
+                            className="w-full rounded-lg shadow-xl border-4 border-border/40"
+                          />
                         </div>
-                      </div>
-                      
-                      <div className="relative max-w-xs mx-auto">
-                        <img
-                          src={project.images.mobile}
-                          alt={`${project.title} mobile view`}
-                          className="w-full rounded-lg shadow-soft border border-border/50"
-                        />
-                        <div className="absolute top-2 left-2 px-2 py-1 bg-background/80 backdrop-blur-sm rounded text-xs font-medium text-muted-foreground">
-                          Mobile View
-                        </div>
-                      </div>
+                      ) : (
+                        // Lead Stream App: Superimposed layout
+                        <>
+                          {/* Desktop Image */}
+                          <div className="relative z-10">
+                            <img
+                              src={project.images.desktop}
+                              alt={`${project.title} desktop view`}
+                              className="w-full rounded-lg shadow-xl border-4 border-border/40"
+                            />
+                          </div>
+                          
+                          {/* Mobile Image - Superimposed */}
+                          <div className="absolute -right-4 -bottom-4 z-20 w-32 h-56">
+                            <img
+                              src={project.images.mobile}
+                              alt={`${project.title} mobile view`}
+                              className="w-full h-full object-cover object-top rounded-lg shadow-xl border-4 border-border/40"
+                            />
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
                 )}
@@ -150,9 +181,11 @@ const ProjectsSection = () => {
                     </p>
                     
                     <div className="flex gap-3">
-                      <Button variant="outline" className="group">
-                        <Github className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                        View Code
+                      <Button variant="outline" className="group" asChild>
+                        <a href="https://github.com/Vlad-Cojocaru" target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                          View Code
+                        </a>
                       </Button>
                     </div>
                   </div>

@@ -36,7 +36,7 @@ const VisionSection = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=350&h=450&fit=crop"
                     alt="Innovation and ideas"
-                    className="w-72 h-80 object-cover rounded-xl shadow-soft border border-border/50"
+                    className="w-80 h-96 object-cover rounded-xl shadow-soft border border-border/50"
                   />
                   <div className="absolute inset-0 bg-gradient-accent/10 rounded-xl"></div>
                 </div>
@@ -58,7 +58,7 @@ const VisionSection = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=350&h=400&fit=crop"
                     alt="Team collaboration"
-                    className="w-72 h-72 object-cover rounded-xl shadow-soft border border-border/50"
+                    className="w-80 h-80 object-cover rounded-xl shadow-soft border border-border/50"
                   />
                   <div className="absolute inset-0 bg-gradient-primary/10 rounded-xl"></div>
                 </div>

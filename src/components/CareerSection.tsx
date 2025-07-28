@@ -85,9 +85,11 @@ const CareerSection = () => {
               <p className="text-muted-foreground mb-6">
                 Download my full resume with detailed experience, projects, and technical skills.
               </p>
-              <Button variant="hero" size="lg" className="group">
-                <Download className="w-5 h-5 group-hover:animate-bounce" />
-                Download Resume (PDF)
+              <Button variant="hero" size="lg" className="group" asChild>
+                <a href="/Vlad Cojocaru Resume.pdf" download="Vlad Cojocaru Resume.pdf">
+                  <Download className="w-5 h-5 group-hover:animate-bounce" />
+                  Download Resume (PDF)
+                </a>
               </Button>
             </div>
           </div>
