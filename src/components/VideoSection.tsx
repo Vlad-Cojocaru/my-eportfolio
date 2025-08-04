@@ -14,19 +14,25 @@ const VideoSection = () => {
           <div className="relative">
             <div className="relative max-w-4xl mx-auto">
               <div className="w-full rounded-2xl shadow-2xl border-4 border-primary/20 relative z-10 overflow-hidden">
-                <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/16nwafb82i.js" async type="module"></script>
-                <style>
-                  {`
-                    wistia-player[media-id='16nwafb82i']:not(:defined) { 
-                      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/16nwafb82i/swatch'); 
-                      display: block; 
-                      filter: blur(5px); 
-                      padding-top:56.25%; 
-                    }
-                  `}
-                </style>
-                <wistia-player media-id="16nwafb82i" aspect="1.7777777777777777"></wistia-player>
+                <div 
+                  className="wistia_responsive_padding"
+                  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+                >
+                  <div 
+                    className="wistia_responsive_wrapper"
+                    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+                  >
+                    <iframe
+                      src="https://fast.wistia.com/embed/medias/16nwafb82i/swatch"
+                      title="Why Me Video"
+                      allow="autoplay; fullscreen"
+                      allowFullScreen
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                    ></iframe>
+                  </div>
+                </div>
               </div>
               
               {/* Decorative elements */}
