@@ -13,21 +13,21 @@ const VideoSection = () => {
           
           <div className="relative">
             <div className="relative max-w-4xl mx-auto">
-              <video 
-                className="w-full rounded-2xl shadow-2xl border-4 border-primary/20 relative z-10"
-                controls
-                preload="auto"
-                onError={(e) => console.error('Video error:', e)}
-                onLoadStart={() => console.log('Video loading started')}
-                onCanPlay={() => console.log('Video can play')}
-                style={{ pointerEvents: 'auto' }}
-                crossOrigin="anonymous"
-              >
-                <source src="/WhyMeCO-OP.mp4" type="video/mp4" />
-                <source src="./WhyMeCO-OP.mp4" type="video/mp4" />
-                <source src="WhyMeCO-OP.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <div className="w-full rounded-2xl shadow-2xl border-4 border-primary/20 relative z-10 overflow-hidden">
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/16nwafb82i.js" async type="module"></script>
+                <style>
+                  {`
+                    wistia-player[media-id='16nwafb82i']:not(:defined) { 
+                      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/16nwafb82i/swatch'); 
+                      display: block; 
+                      filter: blur(5px); 
+                      padding-top:56.25%; 
+                    }
+                  `}
+                </style>
+                <wistia-player media-id="16nwafb82i" aspect="1.7777777777777777"></wistia-player>
+              </div>
               
               {/* Decorative elements */}
               <div className="absolute -inset-4 bg-gradient-primary/20 rounded-2xl blur-xl opacity-60"></div>
