@@ -23,7 +23,7 @@ const VideoSection = () => {
                     style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
                   >
                     <iframe
-                      src="https://fast.wistia.com/embed/medias/16nwafb82i/swatch"
+                      src="https://fast.wistia.com/embed/medias/16nwafb82i"
                       title="Why Me Video"
                       allow="autoplay; fullscreen"
                       allowFullScreen
